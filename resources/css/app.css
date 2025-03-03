@@ -2,171 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'Melodrama';
-    src: url('fonts/Melodrama-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+:root {
+    --color-danger: #ff1948; /* Rojo */
+    --color-success: #6ce9a6; /* Verde */
+    --color-light: #ffffff; /* Blanco */
+    --color-dark: #2e4343; /* Gris oscuro */
+    --color-matgreen: #688181; /* Verde mate */
+    --color-lightgreen: #d4e1e3; /* Verde claro */
+    --color-lightgray: #ebf3f5; /* Gris claro */
+    --color-transparent: transparent; /* Transparente */
 }
 
-@font-face {
-    font-family: 'Melodrama';
-    src: url('fonts/Melodrama-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+*{
+    font-family: 'Inter', sans-serif;
 }
 
-@font-face {
-    font-family: 'Melodrama';
-    src: url('Melodrama-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-@font-face {
-    font-family: 'Melodrama';
-    src: url('Melodrama-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Melodrama';
-    src: url('Melodrama-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
+.text-block{
     font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-100-normal.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-100-italic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-200-normal.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-200-italic.woff') format('woff');
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-300-normal.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-400-normal.woff') format('woff');
     font-weight: 400;
-    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--color-transparent);
 }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-400-italic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
+.hover-line{
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    top: auto;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-matgreen);
 }
 
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-500-normal.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-500-italic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-600-normal.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-700-normal.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-700-italic.woff') format('woff');
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-800-normal.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-800-italic.woff') format('woff');
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-900-normal.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('/fonts/inter/inter-latin-900-italic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
-
-* {
-
-}
-
-.Navbar {
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-}
 .h2 {
     font-size: 46px;
-    font-weight: 500px;
+    font-weight: 600;
     line-height: 1.2;
     font-family: 'Melodrama';
+}
+
+.baner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    background-color: var(--color-matgreen);
+    font-family: 'Inter';
+    font-weight: 500;
+    color: var(--color-light);
+    padding: 10px 20px;
+}
+
+.cart-button{
+    position: relative;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-lightgray);
+    backdrop-filter: blur(500px);
+}
+
+.cart-button-icon{
+    display: inline-flex;
+    width: 24px;
+    justify-content: center;
+    align-self: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    color: var(--color-dark);
+}
+
+.cart-quantity{
+    position: absolute;
+    left: auto;
+    top: -4px;
+    right: -4px;
+    bottom: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-size: 10px;
+    width: 16px;
+    line-height: 1.8;
 }

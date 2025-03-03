@@ -13,13 +13,14 @@
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased font-sans">
-
+    <body >
         <header>
+            <x-baner>
+                New products available
+            </x-baner>
             @if (Route::has('login'))
                 <livewire:welcome.navigation />
             @endif
         </header>
-
     </body>
 </html>

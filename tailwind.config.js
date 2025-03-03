@@ -15,14 +15,14 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: '#3490dc', // Azul
-                secondary: '#ffed4a', // Amarillo
-                danger: '#e3342f', // Rojo
-                success: '#38c172', // Verde
-                warning: '#f6993f', // Naranja
-                info: '#6cb2eb', // Celeste
-                light: '#f8fafc', // Gris claro
+                danger: '#ff1948', // Rojo
+                success: '#6ce9a6', // Verde
+                light: '#fff', // Gris claro
                 dark: '#2e4343', // Gris oscuro
+                matgreen: '#688181',
+                lightgreen: '#d4e1e3',
+                lightgray: '#ebf3f5',
+                transparent: 'transparent',
             },
         },
     },
