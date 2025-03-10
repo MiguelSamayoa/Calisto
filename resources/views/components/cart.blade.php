@@ -14,3 +14,4 @@
         </svg>
     </div>
 </button>
+{{-- TODO: implementar (Cuando este disponible) el sistema que permitira hacer el numero de productos del carrito dinamico --}}

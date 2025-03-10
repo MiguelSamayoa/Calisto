@@ -3,37 +3,33 @@
         <div class="nav-element">
             <div class="nav-content">
                 <div class="nav-menu" id="nav-menu">
+                    <div class="session-nav-buttons">
+                        <x-nav-link message="Login" route="login"></x-nav-link>
+                        @if (Route::has('register'))
+                            <x-nav-link message="Register" route="register"></x-nav-link>
+                        @endif
+                    </div>
                     <x-nav-link message="home" route="/"> </x-nav-link>
-                    <x-nav-link message="our shop" route='/shop'> </x-nav-link>
+                    <x-nav-link message="shop" route='/shop'> </x-nav-link>
                     <x-nav-link message="contact us"> </x-nav-link>
                 </div>
 
                 <div>
-                    <a href="{{ url('/') }}" class="h2">
-                        CALISTO
-                    </a>
+                    <x-application-logo></x-application-logo>
                 </div>
             </div>
 
             <div class="nav-buttons-wrap">
-
-                <div>
-                    <x-cart></x-cart>
-                </div>
-
                 @auth
-                    <a href="{{ url('/dashboard') }}">
-                        Dashboard
-                    </a>
+                    <x-cart></x-cart>
+                    {{-- <x-nav-link message="dashboard" route="/dashboard"></x-nav-link> --}}
                 @else
-                    <a href="{{ route('login') }}">
-                        Log in
-                    </a>
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}">
-                            Register
-                        </a>
-                    @endif
+                    <div class="session-nav-buttons-wrap">
+                        <x-nav-link message="Login" route="login"></x-nav-link>
+                        @if (Route::has('register'))
+                            <x-nav-link message="Register" route="register"></x-nav-link>
+                        @endif
+                    </div>
                 @endauth
 
 
@@ -62,7 +58,6 @@
             if (menu.classList.contains("active")) {
                 // Cerrar menú con retraso en la visibilidad
                 menu.classList.remove("active");
-// Tiempo de la animación (coincide con CSS)
             } else {
                 // Abrir menú
                 menu.style.visibility = "visible";

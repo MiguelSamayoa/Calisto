@@ -12,8 +12,10 @@
 
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="https://kit.fontawesome.com/3cc229930b.js" crossorigin="anonymous"></script>
     </head>
     <body >
+        {{-- header --}}
         <header>
             <x-baner>
                 New products available
@@ -22,5 +24,15 @@
                 <livewire:welcome.navigation />
             @endif
         </header>
+
+        {{-- main --}}
+        <main>
+            A ver que chingados hago aqui
+        </main>
+
+        {{-- footer --}}
+        <footer>
+            <x-footer></x-footer>
+        </footer>
     </body>
 </html>

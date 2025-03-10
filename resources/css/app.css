@@ -23,22 +23,46 @@ body{
     padding: 0;
 }
 
+p{
+    margin-bottom: 0px;
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.container-main{
+    width: 100%;
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 .text-block{
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     background-color: var(--color-transparent);
+    position: relative;
 }
 
-.hover-line{
-    left: 0%;
-    bottom: 0%;
-    right: 0%;
-    top: auto;
-    width: 100%;
+.hover-line {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0%;
     height: 1px;
     background-color: var(--color-matgreen);
+    transition: all 0.3s ease-out;
+}
+
+  /* Al hacer hover en el item, se muestra la línea */
+.text-block:hover .hover-line {
+    width: 100%;
+    opacity: 1;
 }
 
 .h2 {
@@ -102,4 +126,55 @@ body{
     font-size: 10px;
     width: 16px;
     line-height: 1.8;
+}
+
+.nav-button{
+    padding: 12px 24px;
+    border: solid 1px var(--color-matgreen);
+    background-color: var(--color-light);
+    box-shadow: 0 4px 4px rgba(46, 67, 67 0.15);
+    transition-property: color, background-color;
+    transition-duration: 350ms 350ms;
+    transition-timing-function: ease, ease;
+    text-transform: uppercase;
+}
+
+.primary-button{
+    position: relative;
+    padding: 0px;
+    background-color: var(--color-transparent);
+}
+
+.button-border{
+    position: relative;
+    z-index: 10;
+    padding: 16px 24px;
+    border: solid 1px var(--color-matgreen);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border-radius: 2px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    transition: top 0.3s ease, left 0.3s ease;  /* Animamos top y left */
+}
+
+.button-shadow{
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: var(--color-matgreen);
+}
+
+.button-border:hover{
+    position: relative;
+    top: -6px;
+    left: -6px;
 }

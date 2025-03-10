@@ -6,5 +6,5 @@ $classes = 'text-block';
 
 <a {{ $attributes->merge(['class' => $classes]) }} href="{{ url($route) }}" >
     {{ strtoupper($message) }}
-    <div class="hover-line"></div>
+    <span class="hover-line"></span>
 </a>
