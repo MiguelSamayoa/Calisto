@@ -74,3 +74,15 @@
     background-color: var(--color-matgreen);
 }
 
+.footer-bottom-content-wrap{
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    color: var(--color-light);
+}

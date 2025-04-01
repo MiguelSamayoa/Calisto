@@ -9,9 +9,9 @@
                             <x-nav-link message="Register" route="register"></x-nav-link>
                         @endif
                     </div>
-                    <x-nav-link message="home" route="/"> </x-nav-link>
-                    <x-nav-link message="shop" route='/shop'> </x-nav-link>
-                    <x-nav-link message="contact us"> </x-nav-link>
+                    <x-nav-link :message="__('layout.nav-links.home')" route="/"> </x-nav-link>
+                    <x-nav-link :message="__('layout.nav-links.shop')" route='/shop'> </x-nav-link>
+                    <x-nav-link :message="__('layout.nav-links.contact')" route="/"> </x-nav-link>
                 </div>
 
                 <div>
@@ -22,7 +22,6 @@
             <div class="nav-buttons-wrap">
                 @auth
                     <x-cart></x-cart>
-                    {{-- <x-nav-link message="dashboard" route="/dashboard"></x-nav-link> --}}
                 @else
                     <div class="session-nav-buttons-wrap">
                         <x-nav-link message="Login" route="login"></x-nav-link>

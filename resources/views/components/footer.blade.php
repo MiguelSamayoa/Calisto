@@ -30,15 +30,15 @@
                         <span class="footer-column-title"> Company </span>
 
                         <div class="footer-single-link">
-                            <x-nav-link message="home" route="/"> </x-nav-link>
+                            <x-nav-link :message="__('layout.nav-links.home')" route="/">  </x-nav-link>
 
                         </div>
                         <div class="footer-single-link">
-                            <x-nav-link message="shop" route='/shop'> </x-nav-link>
+                            <x-nav-link :message="__('layout.nav-links.shop')" route='/shop'> </x-nav-link>
 
                         </div>
                         <div class="footer-single-link">
-                            <x-nav-link message="contact us"> </x-nav-link>
+                            <x-nav-link :message="__('layout.nav-links.contact')"> </x-nav-link>
 
                         </div>
                     </div>
@@ -69,7 +69,10 @@
 
     <div class="footer-bottom">
         <div class="container-main">
-            &copy; Todos los derechos reservados
+            <div class="footer-bottom-content-wrap">
+                <span> &copy; Todos los derechos reservados </span>
+                <span> Powered by laravel </span>
+            </div>
         </div>
     </div>
 </div>
