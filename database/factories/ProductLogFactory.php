@@ -14,8 +14,8 @@ class ProductLogFactory extends Factory
     public function definition()
     {
         return [
-            'product_id'  => Product::factory(),
-            'changed_by'  => User::factory(),
+            'product_id'  => Product::inRandomOrder()->first()->id,
+            'changed_by'  => User::inRandomOrder()->first()->id,
             'change_type' => $this->faker->randomElement(['price_update', 'stock_adjustment', 'description_update']),
             'description' => $this->faker->paragraph,
             'changed_at'  => $this->faker->dateTime,

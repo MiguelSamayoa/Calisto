@@ -11,14 +11,22 @@ class Product extends Model
     /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory, SoftDeletes;
 
+    //protected $primaryKey = 'id';
+
     protected $fillable = [
+        'id',
+        'company_id',
         'category_id',
+        'product_type',
         'name',
         'description',
         'price',
         'stock',
-        'material',
-        'gem',
+        'attributes',
+    ];
+
+    protected $casts = [
+        'attributes' => 'array',
     ];
 
     public function category()
@@ -26,18 +34,18 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    // public function images()
-    // {
-    //     return $this->hasMany(ProductImage::class);
-    // }
+    public function images()
+    {
+        return $this->hasMany(ProductImage::class);
+    }
 
-    // public function logs()
-    // {
-    //     return $this->hasMany(ProductLog::class);
-    // }
+    public function logs()
+    {
+        return $this->hasMany(ProductLog::class);
+    }
 
-    // public function reviews()
-    // {
-    //     return $this->hasMany(Review::class);
-    // }
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

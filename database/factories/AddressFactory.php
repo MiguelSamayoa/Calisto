@@ -21,7 +21,7 @@ class AddressFactory extends Factory
     public function definition()
     {
         return [
-            'user_id'         => User::factory(),
+            'user_id'         => User::inRandomOrder()->first()->id,
             'address_line_1'  => $this->faker->streetAddress,
             'address_line_2'  => $this->faker->optional()->secondaryAddress,
             'city'            => $this->faker->city,

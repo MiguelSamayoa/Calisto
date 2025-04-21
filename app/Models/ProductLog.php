@@ -10,7 +10,10 @@ class ProductLog extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
+        'id',
         'product_id',
         'changed_by',
         'change_type',

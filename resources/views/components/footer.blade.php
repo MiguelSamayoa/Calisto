@@ -38,7 +38,7 @@
 
                         </div>
                         <div class="footer-single-link">
-                            <x-nav-link :message="__('layout.nav-links.contact')"> </x-nav-link>
+                            <x-nav-link :message="mb_strtoupper(__('layout.nav-links.contact'))"> </x-nav-link>
 
                         </div>
                     </div>

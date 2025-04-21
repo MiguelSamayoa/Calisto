@@ -10,7 +10,10 @@ class ProductImage extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
+        'id',
         'product_id',
         'image_path',
         'alt_text',

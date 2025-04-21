@@ -21,7 +21,7 @@ class ProductImageFactory extends Factory
     public function definition(): array
     {
         return [
-            'product_id' => Product::factory(),
+            'product_id' => Product::inRandomOrder()->first()->id,
             'image_path' => $this->faker->imageUrl(),
             'alt_text'   => $this->faker->sentence,
         ];

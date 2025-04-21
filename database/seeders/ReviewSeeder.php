@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Review;
 
-class ReviewsTableSeeder extends Seeder
+class ReviewSeeder extends Seeder
 {
     public function run()
     {

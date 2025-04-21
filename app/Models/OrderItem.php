@@ -10,7 +10,10 @@ class OrderItem extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
+        'id',
         'order_id',
         'product_id',
         'quantity',

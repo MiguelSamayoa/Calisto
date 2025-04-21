@@ -10,7 +10,11 @@ class Address extends Model
 {
     /** @use HasFactory<\Database\Factories\AddressFactory> */
     use HasFactory, SoftDeletes;
+
+    protected $primaryKey = 'id';
+
     protected $fillable = [
+        'id',
         'user_id',
         'address_line_1',
         'address_line_2',

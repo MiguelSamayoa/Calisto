@@ -9,9 +9,9 @@
                             <x-nav-link message="Register" route="register"></x-nav-link>
                         @endif
                     </div>
-                    <x-nav-link :message="__('layout.nav-links.home')" route="/"> </x-nav-link>
-                    <x-nav-link :message="__('layout.nav-links.shop')" route='/shop'> </x-nav-link>
-                    <x-nav-link :message="__('layout.nav-links.contact')" route="/"> </x-nav-link>
+                    <x-nav-link :message="mb_strtoupper(__('layout.nav-links.home'))" route="/"> </x-nav-link>
+                    <x-nav-link :message="mb_strtoupper(__('layout.nav-links.shop'))" route='/shop'> </x-nav-link>
+                    <x-nav-link :message="mb_strtoupper(__('layout.nav-links.contact'))" route="/"> </x-nav-link>
                 </div>
 
                 <div>

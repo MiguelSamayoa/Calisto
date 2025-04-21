@@ -10,7 +10,10 @@ class Payment extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
+        'id',
         'order_id',
         'payment_method',
         'status',

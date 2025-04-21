@@ -10,7 +10,10 @@ class Cart extends Model
 {
     use HasFactory, SoftDeletes;
 
+    //protected $primaryKey = 'id';
+
     protected $fillable = [
+        'id',
         'user_id',
     ];
 

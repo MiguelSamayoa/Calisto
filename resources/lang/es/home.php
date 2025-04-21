@@ -2,7 +2,7 @@
 
 return [
     'section-hero' => [
-        'title' => 'Joyería moderna que dura',
+        'title' => 'Productos que duran',
         'subtitle' => 'Hecho a mano con amor y precisión, nuestra joyería está hecha para durar toda la vida.',
         'button' => 'Descubre las novedades',
     ],

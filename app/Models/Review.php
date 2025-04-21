@@ -10,7 +10,10 @@ class Review extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
+        'id',
         'product_id',
         'user_id',
         'rating',

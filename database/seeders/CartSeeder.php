@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Cart;
 
-class CartsTableSeeder extends Seeder
+class CartSeeder extends Seeder
 {
     public function run()
     {
